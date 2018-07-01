@@ -3,7 +3,7 @@
 ## Criando a versao inicial com backup
 sudo docker build . --tag ehipolito/missao-devops-jenkins:0.2.0
 
-sudo docker run -p 8082:8080 -v jenkins_backup:/srv/backup  ehipolito/missao-devops-jenkins:0.2.0
+sudo docker run -p 8082:8080 -v jenkins_backup:/srv/backup --name jenkins_docker ehipolito/missao-devops-jenkins:0.2.0
 
 sudo docker inspect jenkins_docker |grep backup
 
