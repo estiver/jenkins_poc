@@ -1,3 +1,4 @@
 workflow-aggregator:2.5
 workflow-api:2.28
 thinBackup:1.9
+kubernetes:1.9.2

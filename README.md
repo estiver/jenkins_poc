@@ -14,3 +14,14 @@ cat jobs/job1_config.xml |  curl -X POST -H $CRUMB_NEW 'http://admin:admin123@12
 
 ## Atualiza job
 cat jobs/job1_config.xml |  curl -X POST -H $CRUMB_NEW 'http://admin:admin123@127.0.0.1:8082/job/job_1/config.xml' --header "Content-Type: application/xml" -d @-
+
+
+# kubernetes
+sudo kubectl apply -f kubernetes/jenkins-deployment.yaml
+sudo kubectl apply -f kubernetes/jenkins-service.yaml
+sudo kubectl apply -f kubernetes/jenkins-role.yaml
+
+configurar kubernetes no jenkins
+obs: 
+    url do jenkins é com o ip interno
+    labels precisa bater na configuracao e no job
